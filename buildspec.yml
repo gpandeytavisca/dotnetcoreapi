@@ -6,11 +6,11 @@ phases:
   pre_build: 
     commands: 
       - pip install --upgrade awscli 
-      - dotnet restore DotnetCoreAPI.Web/AspNetCoreWebApplication.csproj 
+      - dotnet restore DotnetCoreAPI.Web/DotnetCoreAPI.Web.csproj 
      # - dotnet restore AspNetCoreWebApplicationTest/AspNetCoreWebApplicationTest.csproj 
   build: 
     commands: 
-      - dotnet publish -c release -o ./build_output DotnetCoreAPI.Web/AspNetCoreWebApplication.csproj 
+      - dotnet publish -c release -o ./build_output DotnetCoreAPI.Web/DotnetCoreAPI.Web.csproj 
       #- dotnet publish -c release -o ./test_output DotnetCoreAPI.Web/AspNetCoreWebApplicationTest.csproj 
       #- dotnet vstest AspNetCoreWebApplicationTest/test_output/AspNetCoreWebApplicationTest.dll 
   post_build: 
